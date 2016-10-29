@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<h1>{{category.name}}</h1>
+<a href="{{url_for('newItem', category_id = category.id)}}">New Item</a>
+<ul>
+	{% for item in items %}
+	<li>
+		<h3>{{item.name}}</h3>
+		<a href="{{url_for('editItem', item_id = item.id, category_id = category.id)}}">Edit</a>
+		<a href="{{url_for('removeItem',item_id = item.id, category_id = category.id)}}">Remove</a>
+		<p>{{item.description}}</p>
+		<img src="{{item.thumbnail_url}}" alt="{{item.name}}">
+	</li>
+	{% endfor %}
+</ul>
+{% endblock %}

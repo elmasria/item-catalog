@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Items Catalog</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='vendors/bootstrap/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+	<link rel="shortcut icon" type="image/ico" href="{{ url_for('static', filename='images/favicon.ico') }}">
+	<script src="{{ url_for('static', filename='vendors/jquery/jquery-3.0.0.min.js') }}"></script>
+	<script src="https://apis.google.com/js/client:platform.js?onload=start" async defer></script>
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="/">Items Catalog</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li >
+					<a href="/">Home</a>
+				</li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+			{% if isLoggedIn != None %}
+				<li class="li-logout">
+					<a href="/gdisconnect"><span class="glyphicon glyphicon-log-out"></span> logout</a>
+				</li>
+			{% endif %}
+			{% if isLoggedIn == None %}
+				<li class="li-login">
+					<a href="/login"><span class="glyphicon glyphicon-log-in"></span> login</a>
+				</li>
+			{% endif %}
+			</ul>
+		</div>
+	</nav>
+	<div class="container">
+		{% block content %}
+
+		{% endblock %}
+	</div>
+	<script>
+		$(document).ready(function() {
+			$('a[href="' + this.location.pathname + '"]').parent().addClass('active');
+		});
+	</script>
+</body>
+</html>
