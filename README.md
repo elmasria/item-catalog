@@ -18,31 +18,22 @@ application that provides a list of items within a variety of categories as well
 
 ## Run Application
 
-1. Start machine
-```
-$ vagrant up
-```
+1. Start machine ``` $ vagrant up ```
 
 2. Connect to the virtual machine.
+
 ```
+
 $ vagrant ssh
 $ cd /vagrant/item-catalog
+
 ```
 
-3. Create the database.
-```
-$ python setup.py
-```
+3. Create the database. ``` $ python setup.py ```
 
-4. Initialize Database
-```
-$ python initDB.py
-```
+4. Initialize Database. ``` $ python initDB.py ```
 
-5. Run Application
-```
-$ python app.py
-```
+5. Run Application. ``` $ python app.py ```
 
 6. Navigate to ```http://localhost:5000```
 
