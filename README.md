@@ -22,12 +22,10 @@ application that provides a list of items within a variety of categories as well
 
 2. Connect to the virtual machine.
 
-```
-
-$ vagrant ssh
-$ cd /vagrant/item-catalog
-
-```
+	```
+	$ vagrant ssh
+	$ cd /vagrant/item-catalog
+	```
 
 3. Create the database. ``` $ python setup.py ```
 
