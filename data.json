@@ -1,44 +1,54 @@
 {
+	"user":[{
+		"id": "110929357276881428735",
+		"name": "Ahmad EL Masri",
+		"email":"ahmadjelmasri@gmail.com",
+		"picture": "https://lh4.googleusercontent.com/-8KwCcKQbAiI/AAAAAAAAAAI/AAAAAAAAACU/6dDnHslw1Hg/photo.jpg"
+	}],
 	"category-list": [{
 		"id": 1,
 		"name": "Python",
-		"description":""
+		"description":"Take advantage of JavaScript’s power to build robust web-scale or enterprise applications that are easy to extend and maintain. By applying the design patterns outlined in this practical book, experienced JavaScript developers will learn how to write flexible and resilient code that’s easier—yes, easier—to work with as your code base grows."
 	}, {
 		"id": 2,
 		"name": "Database",
-		"description":""
+		"description":"If you've mastered Python's fundamentals, you're ready to start using it to get real work done. Programming Python will show you how, with in-depth tutorials on the language's primary application domains: system administration, GUIs, and the Web. You'll also explore how Python is used in databases, networking, front-end scripting layers, text processing, and more. This book focuses on commonly used tools and libraries to give you a comprehensive understanding of Python’s many roles in practical, real-world programming."
 	}, {
 		"id": 3,
 		"name": "JavaScript",
-		"description":""
+		"description":"Design, develop, and implement streamlined databases with PostgreSQL"
 	}, {
 		"id": 4,
 		"name": "HTML / CSS",
-		"description":""
+		"description":"No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. This concise yet in-depth guide takes you inside scope and closures, two core concepts you need to know to become a more efficient and effective JavaScript programmer. You’ll learn how and why they work, and how an understanding of closures can be a powerful part of your development skillset"
 	}],
 	"item-list": [{
 		"id": 1,
 		"name": "Programming JavaScript Applications",
 		"thumbnail_url": "http://akamaicovers.oreilly.com/images/0636920033141/lrg.jpg",
 		"description": "Take advantage of JavaScript’s power to build robust web-scale or enterprise applications that are easy to extend and maintain. By applying the design patterns outlined in this practical book, experienced JavaScript developers will learn how to write flexible and resilient code that’s easier—yes, easier—to work with as your code base grows.",
-		"category_id": 3
+		"category_id": 3,
+		"user_id":"110929357276881428735"
 	}, {
 		"id": 2,
 		"name": "PostgreSQL Developer's Guide",
 		"thumbnail_url": "http://akamaicovers.oreilly.com/images/9781783989027/lrg.jpg",
 		"description": "Design, develop, and implement streamlined databases with PostgreSQL",
-		"category_id": 2
+		"category_id": 2,
+		"user_id":"110929357276881428735"
 	}, {
 		"id": 3,
 		"name": "You Don't Know JS: Scope & Closures",
 		"thumbnail_url": "http://akamaicovers.oreilly.com/images/0636920026327/lrg.jpg",
 		"description": "No matter how much experience you have with JavaScript, odds are you don’t fully understand the language. This concise yet in-depth guide takes you inside scope and closures, two core concepts you need to know to become a more efficient and effective JavaScript programmer. You’ll learn how and why they work, and how an understanding of closures can be a powerful part of your development skillset",
-		"category_id": 3
+		"category_id": 3,
+		"user_id":"110929357276881428735"
 	}, {
 		"id": 4,
 		"name": "Programming Python",
 		"thumbnail_url": "http://ecx.images-amazon.com/images/I/51s2wyjp9GL._SX258_BO1,204,203,200_.jpg",
 		"description": "If you've mastered Python's fundamentals, you're ready to start using it to get real work done. Programming Python will show you how, with in-depth tutorials on the language's primary application domains: system administration, GUIs, and the Web. You'll also explore how Python is used in databases, networking, front-end scripting layers, text processing, and more. This book focuses on commonly used tools and libraries to give you a comprehensive understanding of Python’s many roles in practical, real-world programming.",
-		"category_id": 1
+		"category_id": 1,
+		"user_id":"110929357276881428735"
 	}]
 }

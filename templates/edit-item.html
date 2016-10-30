@@ -1,19 +1,24 @@
 {% extends "base.html" %}
 {% block content %}
+<h3 class="list-group-header">Edit {{item.name}}</h3>
 <form action="#" method = 'post'>
 
+	<div class="form-group">
+		<label for="name">Name:</label>
+		<input type ='text' size='30' name='name'  id="name" value="{{item.name}}" class="form-control">
+	</div>
 
-	<p>Name:</p>
-	<input type ='text' size='30' name='name' value="{{item.name}}">
-	<p>Description:</p>
-	<input type ='text' size='30' name='description' value="{{item.description}}">
-	<p>Image:</p>
-	<input type ='text' size='30' name='thumbnail_url' value="{{item.thumbnail_url}}">
+	<div class="form-group">
+		<label for="description">Description:</label>
+		<input type ='text' size='30' name='description' id="description" value="{{item.description}}" class="form-control">
+	</div>
+	<div class="form-group">
+		<label for="thumbnail_url">Image:</label>
+		<input type ='text' size='30' name='thumbnail_url' id="thumbnail_url" value="{{item.thumbnail_url}}" class="form-control">
+	</div>
 
-</br>
+<input type='submit' value='Edit' class="btn btn-primary">
 
-
-<input type='submit' value='Edit'>
-
-<a href = '{{url_for('categoryDetails', category_id = category_id)}}'> Cancel </a>
+<a href = "{{url_for('categoryDetails', category_id = category_id)}}" role="button" class="btn btn-default"> Cancel </a>
+</form>
 {% endblock %}

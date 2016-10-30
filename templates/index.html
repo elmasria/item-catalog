@@ -1,13 +1,14 @@
 {% extends "base.html" %}
 {% block content %}
 
-<ul>
+<h3 class="list-group-header">Available Categories</h3>
+<div class="list-group">
 	{% for category in categories %}
 
-	<li>
-		<a href="{{ url_for('categoryDetails', category_id = category.id)}}">{{category.name}}</a>
-		<p>{{category.description}}</p>
-	</li>
+	 <a href="{{ url_for('categoryDetails', category_id = category.id)}}" class="list-group-item list-group-item-action featured">
+		<h5 class="list-group-item-heading" >{{category.name}}</h5 >
+		<p class="list-group-item-text">{{category.description}}</p>
+	</a>
 	{% endfor %}
-</ul>
+</div>
 {% endblock %}

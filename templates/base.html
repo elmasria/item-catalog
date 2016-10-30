@@ -9,21 +9,28 @@
 	<script src="https://apis.google.com/js/client:platform.js?onload=start" async defer></script>
 </head>
 <body>
-	<nav class="navbar navbar-inverse">
+	<nav class="navbar navbar-inverse featured">
 		<div class="container-fluid">
 			<div class="navbar-header">
 				<a class="navbar-brand" href="/">Items Catalog</a>
 			</div>
 			<ul class="nav navbar-nav">
 				<li >
-					<a href="/">Home</a>
+					<a href="/items/">All Items</a>
 				</li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
 			{% if isLoggedIn != None %}
+				{% if provider == "google" %}
 				<li class="li-logout">
 					<a href="/gdisconnect"><span class="glyphicon glyphicon-log-out"></span> logout</a>
 				</li>
+				{% endif %}
+				{% if provider == "facebook" %}
+				<li class="li-logout">
+					<a href="/fbdisconnect"><span class="glyphicon glyphicon-log-out"></span> logout</a>
+				</li>
+				{% endif %}
 			{% endif %}
 			{% if isLoggedIn == None %}
 				<li class="li-login">
@@ -33,6 +40,17 @@
 			</ul>
 		</div>
 	</nav>
+	<div class = 'flash'>
+	{% with messages = get_flashed_messages() %}
+		{% if messages %}
+		<ul>
+			{% for message in messages %}
+		    <li> <strong> {{ message }} </strong> </li>
+			{% endfor %}
+		</ul>
+		{% endif %}
+	{% endwith %}
+	</div>
 	<div class="container">
 		{% block content %}
 

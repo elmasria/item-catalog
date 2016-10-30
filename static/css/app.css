@@ -1,0 +1,81 @@
+.navbar-inverse.featured {
+  background-color: #dc3352;
+  border: 0;
+  border-radius: 0;
+}
+
+.navbar-inverse.featured .navbar-brand {
+  color: #fff;
+  font-weight: bold;
+}
+
+.navbar-inverse.featured .navbar-nav>li>a {
+  color: #a8d8fe;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.list-group-item-action.featured:hover {
+  color: #fff;
+  text-decoration: none;
+  background-color: #0275d8;
+  border-color: #0275d8;
+}
+
+.list-group-item-action.featured:hover .list-group-item-heading {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.list-group-header {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  color: #fff;
+  background-color: #0275d8;
+  border-color: #0275d8;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.no-item-div {
+  width: 90%;
+  background-color: #333;
+  opacity: 0.7;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: medium;
+  margin: auto;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.item-header {
+  text-align: center;
+  background-color: #dc3352;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.item-p {
+  text-align: justify;
+  width: 95%;
+  margin: auto;
+  padding-bottom: 10px;
+}
+
+.item-image-div {
+  width: 100%;
+  text-align: center;
+}
+
+.item-image {
+  width: 80%;
+}
+
+.new-item-btn {
+  margin-bottom: 10px;
+}

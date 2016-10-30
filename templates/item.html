@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
-
-{% for item in items %}
-
-<h1>{{item.name}}</h1>
-<p>{{item.description}}</p>
-
-{% endfor %}
-
+<h3 class="list-group-header">Available Items</h3>
+<div class="list-group">
+	{% for item in items %}
+	<a href="#" class="list-group-item list-group-item-action featured">
+		<h5 class="list-group-item-heading" >{{item.name}}</h5>
+		<p class="list-group-item-text">{{item.description}}</p>
+	</a>
+	{% endfor %}
+	</div>
 {% endblock %}

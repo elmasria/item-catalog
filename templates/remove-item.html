@@ -1,15 +1,10 @@
 {% extends "base.html" %}
 {% block content %}
-
+<h3 class="list-group-header">Are you sure you want to remove the Item?</h3>
 <form action="#" method = 'post'>
-
-<input type='submit', value = 'Delete'>
-
-
-
+	<input type='submit', value = 'Delete' class="btn btn-danger">
+	<a href = "{{url_for('categoryDetails', category_id = category_id)}}"
+	role="button" class="btn btn-default">Cancel</a>
 
 </form>
-
-<a href = '{{url_for('categoryDetails', category_id = category_id)}}'> Cancel </a>
-
 {% endblock %}

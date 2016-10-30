@@ -2,17 +2,33 @@
 {% block content %}
 
 
-<h1>{{category.name}}</h1>
-<a href="{{url_for('newItem', category_id = category.id)}}">New Item</a>
-<ul>
+<h3 class="list-group-header">{{category.name}}</h3>
+{% if isLoggedIn != None %}
+<a href="{{url_for('newItem', category_id = category.id)}}" class="btn btn-primary new-item-btn">New Item</a>
+{% endif %}
+{% if items|length == 0 %}
+<div class="no-item-div">
+	<span>No Item Available :(</span>
+</div>
+{% endif %}
+<div class="row">
+
 	{% for item in items %}
-	<li>
-		<h3>{{item.name}}</h3>
-		<a href="{{url_for('editItem', item_id = item.id, category_id = category.id)}}">Edit</a>
-		<a href="{{url_for('removeItem',item_id = item.id, category_id = category.id)}}">Remove</a>
-		<p>{{item.description}}</p>
-		<img src="{{item.thumbnail_url}}" alt="{{item.name}}">
-	</li>
+	<div class="col-lg-6">
+		<h4 class="item-header">{{item.name}}</h3>
+		{% if item.user_id == currentUser and isLoggedIn != None %}
+		<p>
+			<a href="{{url_for('editItem', item_id = item.id, category_id = category.id)}}" class="btn btn-primary ">Edit</a>
+			<a href="{{url_for('removeItem',item_id = item.id, category_id = category.id)}}" class="btn btn-default pull-right">Remove</a>
+		</p>
+		{% endif %}
+		<p class="item-p">{{item.description}}</p>
+		<div class="item-image-div">
+			<img class="item-image" src="{{item.thumbnail_url}}" alt="{{item.name}}">
+		</div>
+	</div>
 	{% endfor %}
-</ul>
+
+</div>
 {% endblock %}
+
